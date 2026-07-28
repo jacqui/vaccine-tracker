@@ -1,7 +1,6 @@
 # Is there a vaccine for that?
 
-A plain-language tracker for disease outbreaks and vaccine status. Next.js
-front end, Postgres via Drizzle, Python scripts for data gathering.
+A proof-of-concept exploring how current disease outbreaks map against vaccination status, and a test case for using Claude to rapidly prototype a data project. Sources include the [Australian Immunisation Handbook](https://immunisationhandbook.health.gov.au/contents) and [WHO Disease Outbreak News alerts](https://www.who.int/emergencies/disease-outbreak-news).
 
 ## Stack
 
@@ -16,24 +15,29 @@ front end, Postgres via Drizzle, Python scripts for data gathering.
    create a project, and copy the pooled connection string from the dashboard.
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Set your database URL**
+
    ```bash
    cp .env.example .env
    # then paste your Neon connection string into .env
    ```
+
    (Drizzle Kit's CLI looks for `.env` by default, not `.env.local` — Next.js
    itself is happy with either, so `.env` is the simpler choice here.)
 
 4. **Push the schema to your database**
+
    ```bash
    npm run db:push
    ```
 
 5. **Seed example data**
+
    ```bash
    npm run db:seed
    ```
