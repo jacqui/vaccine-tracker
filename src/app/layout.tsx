@@ -6,17 +6,17 @@ export const metadata: Metadata = {
   description: "Plain-language status on outbreaks and vaccines, in one place.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body>
         {children}
         <footer className="max-w-xl mx-auto px-5 mt-6 text-xs text-ink-soft">
-          <p>
-            Prototype built for exploration, not medical advice. Always check sources
-            linked on each disease page and talk to a healthcare provider for personal
-            decisions.
-          </p>
+          <p>Prototype built for exploration and research purposes.</p>
         </footer>
       </body>
     </html>
